@@ -14,6 +14,7 @@ It demonstrates REST API implementation, JWT-based authentication, and CI integr
 ---
 
 ## Project Structure
+```
 spring-blog/
 ├─ src/main/java # Service, Controller, Domain, Repository
 ├─ src/main/resources # Configuration, static files
@@ -21,3 +22,4 @@ spring-blog/
 ├─ gradlew / gradlew.bat
 ├─ build.gradle
 └─ .github/workflows/ci.yml
+```

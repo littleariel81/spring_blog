@@ -12,6 +12,7 @@
 ---
 
 ## 프로젝트 구조
+```
 spring-blog/
 ├─ src/main/java # Service, Controller, Repository
 ├─ src/main/resources # Configuration, static files
@@ -19,3 +20,4 @@ spring-blog/
 ├─ gradlew / gradlew.bat
 ├─ build.gradle
 └─ .github/workflows/ci.yml
+```
