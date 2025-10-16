@@ -19,5 +19,5 @@ spring-blog/
 ├─ gradle/ # Gradle Wrapper
 ├─ gradlew / gradlew.bat
 ├─ build.gradle
-└─ .github/workflows/ci.yml
+└─ .github/workflows/ci.yml 
 ```
