@@ -1,0 +1,8 @@
+﻿#sensitive file
+/src/main/resources/application.properties
+
+#IntelliJ
+/.idea/
+
+#Test
+/src/test

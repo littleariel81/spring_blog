@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Example Thymeleaf</title>
+</head>
+<body>
+<p th:text="${#temporals.format(today,'yyyy-mm-dd')}"></p>
+<div th:object="${person}">
+    <p th:text="|Name : *{name}|"></p>
+    <p th:text="|Age : *{age}|"></p>
+    <ul th:each="hobby: *{hobbies}">
+        <li th:text="${hobby}"></li>
+        <span th:if="${hobby=='Programming'}">(Main Hobby)</span>
+    </ul>
+</div>
+<a th:href="@{/api/articles/{id}(id=${person.id})}"View content</a>
+</body>
+</html>

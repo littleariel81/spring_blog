@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uon.spring_blog.config.jwt.TokenProviderTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2025-09-01T00:56:24.157Z" hostname="DESKTOP-4HKMPB4" time="0.32">
+  <properties/>
+  <testcase name="validToken():유효한 토큰인 때에 유효성 검증에 성공한다." classname="uon.spring_blog.config.jwt.TokenProviderTest" time="0.172"/>
+  <testcase name="validToken():만료된 토큰인 때에 유효성 검증에 실패한다." classname="uon.spring_blog.config.jwt.TokenProviderTest" time="0.009"/>
+  <testcase name="getAuthentication():토큰기반으로 인증정보를 가져올 수 있다." classname="uon.spring_blog.config.jwt.TokenProviderTest" time="0.014"/>
+  <testcase name="getUserId():토큰으로 유저ID를 가져올 수 있다." classname="uon.spring_blog.config.jwt.TokenProviderTest" time="0.011"/>
+  <testcase name="generateToken():유저정보와 만료기간을 전달해 토큰을 만들수 있다." classname="uon.spring_blog.config.jwt.TokenProviderTest" time="0.11"/>
+  <system-out><![CDATA[2025-09-01T09:56:24.139+09:00  INFO 6880 --- [spring_blog] [    Test worker] t.c.s.AnnotationConfigContextLoaderUtils : Could not detect default configuration classes for test class [uon.spring_blog.config.jwt.TokenProviderTest]: TokenProviderTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+2025-09-01T09:56:24.154+09:00  INFO 6880 --- [spring_blog] [    Test worker] .b.t.c.SpringBootTestContextBootstrapper : Found @SpringBootConfiguration uon.spring_blog.SpringBlogApplication for test class uon.spring_blog.config.jwt.TokenProviderTest
+Hibernate: 
+    insert 
+    into
+        users
+        (email, nickname, password, id) 
+    values
+        (?, ?, ?, default)
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

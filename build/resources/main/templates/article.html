@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Blog Article</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="~{header :: headerFragment}"></div>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-8">
+            <article>
+                <input type="hidden" id="article-id" th:value="${article.id}">
+                <header class="mb-4">
+                    <h1 class="fx-bolder mb-1" th:text="${article.title}"></h1>
+                    <div class="text-muted fst-italic mb-2" th:text="|Posted on ${#temporals.format(article.createdAt,'yyyy-MM-dd HH:mm')} By ${article.author}|"></div>
+                </header>
+                <section class="mb-5">
+                    <p class="fs-5 mb-4" th:text="${article.content}"></p>
+                </section>
+                <button type="button" class="btn btn-primary btn-sm"
+                th:onclick="|location.href='@{/new-article?id={articleId}(articleId=${article.id})}'|">Modify</button>
+                <button type="button" class="btn btn-secondary btn-sm" id="delete-btn">Delete</button>
+            </article>
+        </div>
+    </div>
+
+
+
+</div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
+<script src="/js/article.js"></script>
+</body>
+</html>
